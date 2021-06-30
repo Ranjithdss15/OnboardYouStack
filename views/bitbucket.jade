@@ -1,0 +1,27 @@
+//- extends layout
+
+//- block content
+//-   h1 BitBucket
+//-   p=response
+//-   p=link
+
+html
+head
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu', crossorigin='anonymous')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+body(style='background-color:#e4ebff;')
+  nav.navbar.navbar-default(style='background-color:#0747a6;border-color:#b5c3ee')
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='/bitbucket',style='color:#fff') BitBucket
+        ul.nav.navbar-nav
+          li
+            a(href='/bitbucket',style='color:#fff') Home
+  //- h1 BitBucket
+  #bodyDiv1(align='center')
+    h3=response
+    h4=link
+    br
+  #homeDiv(align='center')
+    button#homeButton.btn.btn-primary  Home
+  script(type='text/javascript', src='/bitbucket.js')  

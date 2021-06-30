@@ -1,0 +1,54 @@
+
+html
+    head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+  body(style='background-color:#e4ebff;')
+    nav.navbar.navbar-default(style='background-color:#0747a6;border-color:#b5c3ee')
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='/bitbucket',style='color:#fff') BitBucket
+        //- ul.nav.navbar-nav
+        //-   li
+        //-     a(href='/bitbucket',style='color:#fff') Home
+        //-   li
+        //-     a(href='#',style='color:#fff') Page 1
+    //- body(style='background-color:#C9D6FF;')
+        
+    //- h1 BitBucket
+    //- #getDiv.container(style='width:500px; margin:auto')
+    //-     h3 Check Repository status
+    //-     label(for='repoName',col-sm-2) RepoName 
+    //-     input#repoName.form-control(type='text',placeholder='Enter Repo Name',size='30%')
+    //-     br
+    //-     button#getRepo.btn.btn-primary.btn-sm GetRepo
+       
+    //- #createDiv.container(align='center')
+        
+    //-     h2 Create a new Repo
+    //-     label(for='repoName2') RepoName 
+    //-     //- input#repoName2.form-control.mb-2.mr-sm-2(type='text',placeholder='Enter Repo Name')
+    //-     input#repoName2(type='text',placeholder='Enter Repo Name',size='30%')
+    //-     button#createRepo.btn.btn-primary.btn-sm Create Repo
+    #postDiv.container(style='width:500px; margin:auto')
+      form(action='/bitbucket/create2', method='post',style='width:500px; margin:auto')
+        h3 Create Repository
+        label(for='repoName2') Repository Name 
+        input#repoName2.form-control(name='repoNameR', type='text' placeholder='Enter Repo Name with syntax: iac-reponame')
+        br
+        label(for='projName') Select Project
+        //- input#projName(name='projNameR', type='text' placeholder='Enter Project Name')
+        select#projName.form-control(name='projNameR')
+                option(value="option1") option1
+                option(value="option2") option2
+                option(value="option3") option3
+                option(value="option4") option4
+        br
+        button#createRepo2.btn.btn-primary.btn-sm(type='submit') Create Repo
+        br
+    script(type='text/javascript', src='/bitbucket.js')  
